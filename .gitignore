@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.tgz
+coverage/
+.env
+.env.*
+!.env.example
+!.env.sample
+qqbot.config.json
+/config.json
+/.agents/
+/.qqbot-dist-*/
+/events/
+/attachments/
+*.sock
+*.log

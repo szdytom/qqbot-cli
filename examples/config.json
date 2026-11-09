@@ -1,0 +1,9 @@
+{
+  "appId": "YOUR_APP_ID",
+  "appSecret": "YOUR_APP_SECRET",
+  "attachments": {
+    "maxBytes": 104857600,
+    "timeoutSeconds": 120,
+    "concurrency": 2
+  }
+}

@@ -1,0 +1,18 @@
+[Unit]
+Description=QQ notification daemon
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+# Replace both executable paths with absolute paths on your machine.
+ExecStart=/absolute/path/to/node /absolute/path/to/qqbot-cli/dist/cli.js daemon run
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=1800
+UMask=0077
+
+[Install]
+WantedBy=default.target

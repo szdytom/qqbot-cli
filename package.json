@@ -1,0 +1,46 @@
+{
+  "name": "qqbot-cli",
+  "version": "0.1.0",
+  "description": "A local QQ notification daemon and CLI for agent tools",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szdytom/qqbot-cli.git"
+  },
+  "homepage": "https://github.com/szdytom/qqbot-cli#readme",
+  "bugs": {
+    "url": "https://github.com/szdytom/qqbot-cli/issues"
+  },
+  "type": "module",
+  "bin": {
+    "qqbot": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "skills",
+    "examples",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "os": [
+    "linux"
+  ],
+  "packageManager": "pnpm@12.9.0",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "check": "biome check .",
+    "format": "biome check --write .",
+    "test": "node --test test/*.test.ts",
+    "prepack": "pnpm run build"
+  },
+  "dependencies": {
+    "@tencent-connect/qqbot-nodejs": "1.0.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.6",
+    "@types/node": "^24.0.0",
+    "typescript": "7.0.2"
+  }
+}
